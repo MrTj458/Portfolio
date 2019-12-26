@@ -1,56 +1,46 @@
 import React from 'react'
+import styled from 'styled-components'
 import Link from 'next/link'
 
-const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' },
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+const NavBar = styled.div`
+  padding: 0.5rem 0;
+  background-color: #2b2b2b;
+  margin-bottom: 1rem;
+  display: flex;
 
-const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href="/">
-          <a>Home</a>
-        </Link>
-      </li>
-      {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
+  li {
+    display: inline;
+    margin: 1rem;
+  }
+
+  a {
+    font-size: 1.25rem;
+    text-decoration: none;
+    color: #fff;
+
+    :hover {
+      color: #aaa;
+    }
+  }
+`
+
+const Nav = () => {
+  return (
+    <NavBar>
+      <ul>
+        <li>
+          <Link href="/">
+            <a>Home</a>
+          </Link>
         </li>
-      ))}
-    </ul>
-
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
-  </nav>
-)
+        <li>
+          <Link href="/projects">
+            <a>Projects</a>
+          </Link>
+        </li>
+      </ul>
+    </NavBar>
+  )
+}
 
 export default Nav
