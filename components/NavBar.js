@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
-const NavBar = styled.div`
+const NavBarStyles = styled.div`
   padding: 0.5rem 0;
   background-color: #2b2b2b;
   margin-bottom: 1rem;
@@ -24,9 +24,9 @@ const NavBar = styled.div`
   }
 `
 
-const Nav = () => {
+const NavBar = () => {
   return (
-    <NavBar>
+    <NavBarStyles>
       <ul>
         <li>
           <Link href="/">
@@ -39,8 +39,8 @@ const Nav = () => {
           </Link>
         </li>
       </ul>
-    </NavBar>
+    </NavBarStyles>
   )
 }
 
-export default Nav
+export default NavBar

@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 import './styles.css'
 
-import Nav from './Nav'
+import NavBar from './NavBar'
 import Footer from './Footer'
 
 const Container = styled.div`
@@ -14,7 +14,7 @@ const Container = styled.div`
 const Layout = ({ children }) => {
   return (
     <>
-      <Nav />
+      <NavBar />
       <Container>{children}</Container>
       <Footer />
     </>
