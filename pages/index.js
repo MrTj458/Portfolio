@@ -60,7 +60,7 @@ const Jobs = styled.div`
 `
 
 const Home = () => (
-  <Layout>
+  <>
     <Head>
       <title>Home | Trevor Hodsdon</title>
     </Head>
@@ -81,7 +81,7 @@ const Home = () => (
         <Job
           title="DevPoint Labs"
           position="Full-stack Web Developer"
-          description="DevPoint Labs is a full-stack web development bootcamp partnered
+          description="DevPoint Labs is a full-stack web development boot-camp partnered
       with the University of Utah. Here I learned the basics of React as
       well as Ruby on Rails and PostgreSQL. Here I got a full-stack
       certification from the University of Utah."
@@ -95,7 +95,7 @@ const Home = () => (
         <Job
           title="CTEC"
           position="Computer Science Student"
-          description="CTEC is a tech school that I went to alongside high school. Here I
+          description="Canyons Technical education Center is a tech school that I went to alongside high school. Here I
             took multiple college-level computer science courses to learn the
             basics of programming in Java, C++, and Swift."
         />
@@ -105,7 +105,7 @@ const Home = () => (
         <a>Check out some of my projects!</a>
       </Link>
     </HomeStyles>
-  </Layout>
+  </>
 )
 
 export default Home

@@ -27,7 +27,7 @@ const ProjectsList = styled.div`
 
 const Projects = () => {
   return (
-    <Layout>
+    <>
       <Head>
         <title>Projects | Trevor Hodsdon</title>
       </Head>
@@ -42,14 +42,14 @@ const Projects = () => {
             image="/images/projects/sorfoundation.png"
             github="https://github.com/MrTj458/SorFoundationSite"
             link="https://sorfoundation.herokuapp.com/"
-            desc="I built a Django webstite for the School of Rock Foundation. It has a full admin page that the foundation managers can use to update sponsors, recipients, gallery images, as well as post about upcoming events."
+            desc="I built a Django website for the School of Rock Foundation. It has a full admin page that the foundation managers can use to update sponsors, recipients, gallery images, as well as post about upcoming events."
           />
           <Project
             name="Hooks News"
             image="/images/projects/hooks-news.png"
             github="https://github.com/MrTj458/react-hooks-news"
             link="https://hooks-news-a15e1.firebaseapp.com/new/1"
-            desc="This site is build with React hoks as well a Firebase. It is a simplified clone of Hacker news."
+            desc="This site is build with React hooks as well a Firebase. It is a simplified clone of Hacker news."
           />
           <Project
             name="Last Minute Take Out"
@@ -67,7 +67,7 @@ const Projects = () => {
           />
         </ProjectsList>
       </ProjectsStyles>
-    </Layout>
+    </>
   )
 }
 
