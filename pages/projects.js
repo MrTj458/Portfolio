@@ -2,7 +2,6 @@ import React from 'react'
 import Head from 'next/head'
 import styled from 'styled-components'
 
-import Layout from '../components/Layout'
 import Project from '../components/Project'
 
 const ProjectsStyles = styled.div`
