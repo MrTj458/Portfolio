@@ -1,6 +1,28 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Footer = () => (
+  <FooterContainer>
+    <ul>
+      <li>
+        <a href="https://github.com/MrTj458">
+          <i className="fab fa-github-square fa-2x"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://www.linkedin.com/in/trevorhodsdon/">
+          <i className="fab fa-linkedin fa-2x"></i>
+        </a>
+      </li>
+      <li>
+        <a href="https://twitter.com/tjhod">
+          <i className="fab fa-twitter-square fa-2x"></i>
+        </a>
+      </li>
+    </ul>
+  </FooterContainer>
+)
+
 const FooterContainer = styled.div`
   padding: 0.5rem 0;
   background-color: #2b2b2b;
@@ -17,27 +39,9 @@ const FooterContainer = styled.div`
     color: #fff;
 
     :hover {
-      color: #aaa;
+      color: #eece1a;
     }
   }
 `
-
-const Footer = () => {
-  return (
-    <FooterContainer>
-      <ul>
-        <li>
-          <a href="https://github.com/MrTj458">Github</a>
-        </li>
-        <li>
-          <a href="https://www.linkedin.com/in/trevorhodsdon/">Linkedin</a>
-        </li>
-        <li>
-          <a href="https://twitter.com/tjhod">Twitter</a>
-        </li>
-      </ul>
-    </FooterContainer>
-  )
-}
 
 export default Footer

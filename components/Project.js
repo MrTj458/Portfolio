@@ -1,6 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 
+const Project = ({ name, image, github, link, desc }) => (
+  <ProjectStyles>
+    <h2>{name}</h2>
+    <img src={image} alt={name} />
+    <div>
+      <a href={github}>
+        <i className="fab fa-github fa-2x"></i>
+        <small>View Repo</small>
+      </a>
+      <a href={link}>
+        <i className="fas fa-eye fa-2x"></i>
+        <small>Visit Site</small>
+      </a>
+    </div>
+    <p>{desc}</p>
+  </ProjectStyles>
+)
+
 const ProjectStyles = styled.div`
   background: #515151;
   padding: 0.5rem;
@@ -12,6 +30,7 @@ const ProjectStyles = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
 
   h2 {
     margin-bottom: 0.5rem;
@@ -24,37 +43,47 @@ const ProjectStyles = styled.div`
     margin: 0 auto;
   }
 
-  ul {
-    margin: 0.5rem 0;
-    list-style: none;
-  }
-
-  li {
-    display: inline;
-  }
-
   a {
-    margin: 0 1rem;
+    margin: 1rem 1rem;
     color: #fff;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+
+    :hover {
+      color: #eece1a;
+    }
+
+    i {
+      transition: 0.5s;
+    }
+
+    i:hover {
+      transform: rotate(-20deg);
+      animation: wiggle 1s 0.5s infinite;
+    }
+  }
+
+  @keyframes rotate {
+    100% {
+      transform: rotate(-20deg);
+    }
+  }
+
+  @keyframes wiggle {
+    0% {
+      transform: rotate(-20deg);
+    }
+
+    50% {
+      transform: rotate(20deg);
+    }
+
+    100% {
+      transform: rotate(-20deg);
+    }
   }
 `
-
-const Project = ({ name, image, github, link, desc }) => {
-  return (
-    <ProjectStyles>
-      <h2>{name}</h2>
-      <img src={image} alt={name} />
-      <ul>
-        <li>
-          <a href={github}>Github</a>
-        </li>
-        <li>
-          <a href={link}>Visit Site</a>
-        </li>
-      </ul>
-      <p>{desc}</p>
-    </ProjectStyles>
-  )
-}
 
 export default Project

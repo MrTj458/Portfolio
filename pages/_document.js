@@ -1,6 +1,6 @@
 import Document, { Head, Main, NextScript } from 'next/document'
 import { ServerStyleSheet } from 'styled-components'
-import GlobalStyle from '../components/GlobalStyle'
+import GlobalStyle from '../components/styles/GlobalStyle'
 
 export default class MyDocument extends Document {
   static async getInitialProps({ renderPage }) {
@@ -23,6 +23,7 @@ export default class MyDocument extends Document {
         <Head>
           {this.props.styleTags}
           <meta name="description" content="Portfolio for Trevor Hodsdon" />
+          <script src="https://kit.fontawesome.com/bd6004422b.js" />
         </Head>
         <body>
           <Main />

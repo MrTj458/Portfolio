@@ -4,26 +4,6 @@ import styled from 'styled-components'
 
 import Project from '../components/Project'
 
-const ProjectsStyles = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  h1 {
-    font-size: 3rem;
-  }
-
-  span {
-    color: #eece1a;
-  }
-`
-
-const ProjectsList = styled.div`
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-`
-
 const Projects = () => {
   return (
     <>
@@ -69,5 +49,25 @@ const Projects = () => {
     </>
   )
 }
+
+const ProjectsStyles = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  span {
+    color: #eece1a;
+  }
+`
+
+const ProjectsList = styled.div`
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+`
 
 export default Projects

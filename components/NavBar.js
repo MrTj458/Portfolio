@@ -2,6 +2,23 @@ import React from 'react'
 import styled from 'styled-components'
 import Link from 'next/link'
 
+const NavBar = () => (
+  <NavBarStyles>
+    <ul>
+      <li>
+        <Link href="/">
+          <a>Home</a>
+        </Link>
+      </li>
+      <li>
+        <Link href="/projects">
+          <a>Projects</a>
+        </Link>
+      </li>
+    </ul>
+  </NavBarStyles>
+)
+
 const NavBarStyles = styled.div`
   padding: 0.5rem 0;
   background-color: #2b2b2b;
@@ -19,28 +36,9 @@ const NavBarStyles = styled.div`
     color: #fff;
 
     :hover {
-      color: #aaa;
+      color: #eece1a;
     }
   }
 `
-
-const NavBar = () => {
-  return (
-    <NavBarStyles>
-      <ul>
-        <li>
-          <Link href="/">
-            <a>Home</a>
-          </Link>
-        </li>
-        <li>
-          <Link href="/projects">
-            <a>Projects</a>
-          </Link>
-        </li>
-      </ul>
-    </NavBarStyles>
-  )
-}
 
 export default NavBar
