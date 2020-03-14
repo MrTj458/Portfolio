@@ -3,6 +3,7 @@ import Head from 'next/head'
 import styled from 'styled-components'
 
 import Project from '../components/Project'
+import LinkButton from '../components/LinkButton'
 
 const Projects = () => {
   return (
@@ -38,13 +39,6 @@ const Projects = () => {
             desc="This site is build with React hooks as well a Firebase. It is a simplified clone of Hacker news."
           />
           <Project
-            name="Last Minute Take Out"
-            image="/images/projects/lmto.png"
-            github="https://github.com/MrTj458/LastMinuteTakeOutSite"
-            link="https://lastminutetakeout.com/"
-            desc="This is a static site made with Bootstrap for my sisters band."
-          />
-          <Project
             name="Firebase todos"
             image="/images/projects/r&fTodos.png"
             github="https://github.com/MrTj458/react-firebase-todos"
@@ -52,6 +46,11 @@ const Projects = () => {
             desc="A very simple todo app made with React and Firebase."
           />
         </ProjectsList>
+        <LinkButton>
+          <a href="https://github.com/MrTj458/">
+            Check out more projects on my Github profile!
+          </a>
+        </LinkButton>
       </ProjectsStyles>
     </>
   )

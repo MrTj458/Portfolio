@@ -4,6 +4,7 @@ import Link from 'next/link'
 import styled from 'styled-components'
 
 import Job from '../components/Job'
+import LinkButton from '../components/LinkButton'
 
 const Home = () => (
   <>
@@ -47,9 +48,11 @@ const Home = () => (
         />
       </Jobs>
 
-      <Link href="/projects">
-        <a>Check out some of my projects!</a>
-      </Link>
+      <LinkButton>
+        <Link href="/projects">
+          <a>Check out some of my projects!</a>
+        </Link>
+      </LinkButton>
     </HomeStyles>
   </>
 )
@@ -83,21 +86,6 @@ const HomeStyles = styled.div`
   h3 {
     margin: 2rem 0;
     text-align: center;
-  }
-
-  a {
-    margin: 1rem 0;
-    background-color: #515151;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-    border: 1px solid #eece1a;
-    border-radius: 5px;
-    padding: 0.5rem 1rem;
-
-    :hover {
-      color: #eece1a;
-    }
   }
 `
 
