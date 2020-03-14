@@ -18,7 +18,7 @@ const Projects = () => {
         <ProjectsList>
           <Project
             name="Forum"
-            image="/images/projects/r&fTodos.png"
+            image="/images/projects/Forum.png"
             github="https://github.com/MrTj458/drf-next-forum"
             link="https://forum.mrtj458.net/"
             desc="A forum application made with Next.js and Django Rest Framework. I have no plans for people using this application and mostly used it to learn the Django Rest Framework basics."
