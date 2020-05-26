@@ -1,23 +1,27 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const Project = ({ name, image, github, link, desc }) => (
-  <ProjectStyles>
-    <h2>{name}</h2>
-    <img src={image} alt={name} />
-    <div>
-      <a href={github}>
-        <i className="fab fa-github fa-2x"></i>
-        <small>View Repo</small>
-      </a>
-      <a href={link}>
-        <i className="fas fa-eye fa-2x"></i>
-        <small>Visit Site</small>
-      </a>
-    </div>
-    <p>{desc}</p>
-  </ProjectStyles>
-)
+const Project = ({ name, image, github, link, desc }) => {
+  return (
+    <ProjectStyles>
+      <h2>{name}</h2>
+      <img src={image} alt={name} />
+      <div>
+        <a href={github}>
+          <i className="fab fa-github fa-2x"></i>
+          <small>View Repo</small>
+        </a>
+        {link !== 'nohost' && (
+          <a href={link}>
+            <i className="fas fa-eye fa-2x"></i>
+            <small>Visit Site</small>
+          </a>
+        )}
+      </div>
+      <p>{desc}</p>
+    </ProjectStyles>
+  )
+}
 
 const ProjectStyles = styled.div`
   background: #515151;
